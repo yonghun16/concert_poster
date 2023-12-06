@@ -4,6 +4,8 @@ $bg: #dde1d3;
 $blue: #00a0c8;
 $red: #d03022;
 $burntRed: #573533;
+$appWidth: 40%;
+$appHeight: 100%;
 
 body {
   background-color: black;
@@ -15,11 +17,15 @@ body {
 
 .poster {
   font-weight: bold;
-  width: 45%;
-  height: 100%;
+  width: $appWidth;
+  height: $appHeight;
+  min-width: 440px;
+  max-width: 600px;
+  min-height: 800px;
+  max-height: 1000px;
   display: grid;
-  grid-template-columns: 80px 1fr 80px;
-  grid-template-rows: 70px 1.2fr 70px 1fr 70px 1.2fr 70px;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 12fr 1fr 10fr 1fr 12fr 1fr;
   background-color: $bg;
   padding: 20px;
   box-sizing: border-box;
