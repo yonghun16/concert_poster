@@ -1,3 +1,68 @@
 @import "./reset.scss";
 
+$bg: #dde1d3;
+$blue: #00a0c8;
+$red: #d03022;
+$burntRed: #573533;
 
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  font-weight: bold;
+  width: 45%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  grid-template-rows: 70px 1.2fr 70px 1fr 70px 1.2fr 70px;
+  background-color: $bg;
+  padding: 20px;
+  box-sizing: border-box;
+  .top-left,
+  .top-right,
+  .top-top,
+  .center-bottom {
+    background-color: $blue;
+  }
+  .center-top,
+  .bottom-left,
+  .bottom-right,
+  .bottom-bottom {
+    background-color: $red;
+  }
+  .center-left,
+  .center-right {
+    background-color: $burntRed;
+  }
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right {
+    grid-row: span 2;
+  }
+  .center-left,
+  .center-right {
+    grid-row: span 3;
+  }
+  h1 {
+    font-size: 78px;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    gap: 10px;
+    font-weight: 600;
+  }
+  .bottom-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
